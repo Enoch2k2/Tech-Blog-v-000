@@ -1,29 +1,5 @@
-<<<<<<< HEAD
-# README
+Tech Blog
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The Tech Blog is a social app built for technologist to network. With this app, they will be able to chat, send messages, make posts, make blogs, and work with each other by building teams.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-=======
-# Tech-Blog-v-000
-A technical blog used for developers.
->>>>>>> 64e0582d3c679274459039f8c13b281bb6a54cce
+Team builder is a great way for people to work together to build apps. To create a team you click on the create a team button. That will make you owner of the team, then you can invite other people to join your team. From there you can use our tools in order to create your projects. You can assign team members tasks. To do lists. Also plan your project.
