@@ -1,22 +1,90 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+html, body {
+  background-image: url('backgroundimage.jpg');
+  height:100%;
+  width:100%;
+  overflow:hidden;
+  position:fixed;
+}
+
+nav.navbar.navbar-default {
+  margin-bottom: 0px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+div.container {
+  height:100%;
+}
+
+div.container-fluid#views {
+  height: 91%;
+  background-color: #FFF;
+  margin-top: 1px;
+  border: 1px solid #f1f1f1;
+}
+
 .navbar-default {
-  background-color: #88c0e2;
+  background-color: rgba(136, 192, 226, 0.5);
+  color: white;
+}
+footer.container-fluid {
+  background-color: rgba(136, 192, 226, 0.5);
+  border: 1px solid white;
+  border-radius: 2px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  margin-top: 1px;
+}
+
+.nav .navbar-nav li a {
+  color: white;
 }
 
 .nav .navbar-nav li a:hover {
   color: white;
+  background-color: rgba(255,255,255, 0.25);
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: white;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+  color: white;
+  background-color: rgba(255,255,255, 0.25);
+}
+
+.navbar-default .navbar-nav > li > a:focus {
+  color: white;
+  background-color: rgba(255,255,255, 0.25);
 }
 
 .navbar-default .navbar-nav > .active > a {
-  background-color: #88c0e2;
+  background-color: rgba(136, 192, 226, 0.5);
+  color: white;
+}
+
+.navbar-default .navbar-nav > .active > a:active {
+  background-color: rgba(255,255,255, 0.25);
   color: white;
 }
 
 .navbar-default .navbar-nav > .active > a:hover {
-  background-color: #88c0e2;
+  background-color: rgba(255,255,255, 0.25);
   color: white;
+}
+
+.navbar-default .navbar-nav > .active > a:visited {
+  background-color: rgba(255,255,255, 0.25);
+  color: white;
+}
+
+.navbar-default .navbar-nav > .active > a:focus {
+  background-color: rgba(255,255,255, 0.25);
+  color:white;
 }
 
 .navbar-default .navbar-brand {
@@ -24,14 +92,15 @@
 }
 
 .navbar-default .navbar-nav > .open > a {
+  background-color: rgba(255,255,255, 0.25);
   color: white;
 }
 
 .navbar-default .navbar-nav > .open > a:hover {
-  background-color: #88c0e2;
+  background-color: rgba(255,255,255, 0.25);
   color: white;
 }
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
-  background-color: #88c0e2;
+  background-color: rgba(255,255,255, 0.25);
   color: white;
 }
