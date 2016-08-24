@@ -1,7 +1,37 @@
-nav li a:hover {
-  background-color: blue;
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.navbar-default {
+  background-color: #88c0e2;
+}
+
+.nav .navbar-nav li a:hover {
   color: white;
 }
 
-@import "bootstrap-sprockets";
-@import "bootstrap";
+.navbar-default .navbar-nav > .active > a {
+  background-color: #88c0e2;
+  color: white;
+}
+
+.navbar-default .navbar-nav > .active > a:hover {
+  background-color: #88c0e2;
+  color: white;
+}
+
+.navbar-default .navbar-brand {
+  color: white;
+}
+
+.navbar-default .navbar-nav > .open > a {
+  color: white;
+}
+
+.navbar-default .navbar-nav > .open > a:hover {
+  background-color: #88c0e2;
+  color: white;
+}
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+  background-color: #88c0e2;
+  color: white;
+}
