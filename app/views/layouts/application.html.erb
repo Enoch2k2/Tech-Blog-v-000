@@ -16,8 +16,14 @@
       <!-- views -->
 
       <div class="container-fluid" id="views">
-        <!-- start row -->
-        <div class="row">
+        <!-- start view logged out -->
+
+        <div ui-view></div>
+
+        <!-- end view logged out -->
+
+        <!-- start row logged in-->
+        <div ng-show="false" class="row">
           <!-- sidebar -->
           <div class="col-sm-2" style="border-right: 1px solid black; border-bottom: 1px solid black">
             <ul class="nav nav-pills nav-stacked">
@@ -48,7 +54,7 @@
           </div>
           <!-- end friend controller -->
         </div>
-        <!-- end row -->
+        <!-- end row logged in-->
       </div>
 
       <!-- end views -->
