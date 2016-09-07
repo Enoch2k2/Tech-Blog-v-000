@@ -9,7 +9,7 @@
   </head>
 
   <body>
-    <div class="container">
+    <div class="container" ng-controller="AuthController">
 
       <%= render "layouts/nav" %>
 
@@ -18,12 +18,12 @@
       <div class="container-fluid" id="views">
         <!-- start view logged out -->
 
-        <div ui-view></div>
+        <div ng-show="!signedIn()" ui-view></div>
 
         <!-- end view logged out -->
 
         <!-- start row logged in-->
-        <div ng-show="false" class="row">
+        <div ng-show="signedIn()" class="row">
           <!-- sidebar -->
           <div class="col-sm-2" style="border-right: 1px solid black; border-bottom: 1px solid black">
             <ul class="nav nav-pills nav-stacked">
