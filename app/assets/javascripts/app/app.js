@@ -2,21 +2,37 @@ angular
   .module('app', ['ui.router', 'templates', 'Devise'])
   .config(function($stateProvider, $urlRouterProvider){
     $stateProvider
-      .state('welcome', {
+      .state('home', {
         url: '/',
-        templateUrl: 'app/templates/welcome.html',
-        controller: 'AuthController'
+        templateUrl: 'app/templates/home.html',
+        controller: 'UserController',
+        onEnter: ['$state', 'Auth', function($state, Auth){
+          Auth.currentUser().catch(function() {
+            $state.go('home.login');
+          });
+        }]
       })
-      .state('signup', {
-        url: '/signup',
+      .state('home.signup', {
+        url: 'signup',
         templateUrl: 'app/templates/sign_up.html',
-        controller: 'AuthController'
+        controller: 'AuthController',
+        onEnter: ['$state', 'Auth', function($state, Auth){
+          Auth.currentUser().then(function(){
+            $state.go('home');
+          })
+        }]
       })
-      .state('login', {
-        url: '/login',
+      .state('home.login', {
+        url: 'login',
         templateUrl: 'app/templates/login.html',
-        controller: 'AuthController'
-      })
+        controller: 'AuthController',
+        onEnter: ['$state', 'Auth', function($state, Auth){
+          Auth.currentUser().then(function(){
+            $state.go('home');
+          })
+        }]
+      });
+
 
     $urlRouterProvider.otherwise('/');
   })

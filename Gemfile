@@ -18,6 +18,8 @@ gem 'devise'
 gem 'angularjs-rails'
 gem 'angular-ui-router-rails'
 gem 'angular-rails-templates'
+gem 'active_model_serializers', '~> 0.10.0'
+gem 'pry'
 
 group :development, :test do
   gem 'byebug', platform: :mri

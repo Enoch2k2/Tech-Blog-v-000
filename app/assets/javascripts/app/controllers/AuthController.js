@@ -1,22 +1,18 @@
-function AuthController($scope, Auth){
-  $scope.signedIn = Auth.isAuthenticated;
-  $scope.logout = Auth.logout;
+function AuthController($scope, Auth, $state){
 
-  Auth.currentUser().then(function(user){
-    $scope.user = use;
-  });
+  $scope.user = {};
 
-  $scope.$on('devise:new-registration', function(e, user){
-    $scope.user = user;
-  });
+  $scope.login = function() {
+    Auth.login($scope.user).then(function(){
+      $state.go('home');
+    });
+  }
 
-  $scope.$on('devise:login', function(e, user){
-    $scope.user = user;
-  });
-
-  $scope.$on('devise:logout', function(e, user){
-    $scope.user = {};
-  });
+  $scope.register = function(){
+    Auth.register($scope.user).then(function(){
+      $state.go('home');
+    });
+  }
 }
 
 angular

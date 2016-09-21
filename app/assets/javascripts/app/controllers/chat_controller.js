@@ -1,8 +1,14 @@
-function ChatController(user){
+function ChatController($scope, UserService, Auth){
   var cc = this;
-  var user = user.falseUser();
+  cc.friends = [];
 
-  cc.friends = user.friends;
+  Auth.currentUser().then(function(){
+    if(Auth.isAuthenticated()){
+      UserService.getFriends().then(function(res){
+        cc.friends = res.data;
+      })
+    }
+  })
 }
 
 angular
